@@ -1,0 +1,36 @@
+package com.zb.cms.order.querydsl;
+
+import static com.querydsl.core.types.PathMetadataFactory.*;
+
+import com.querydsl.core.types.dsl.*;
+
+import com.querydsl.core.types.PathMetadata;
+import javax.annotation.processing.Generated;
+import com.querydsl.core.types.Path;
+import com.zb.cms.user.domain.BaseEntity;
+
+import java.time.LocalDateTime;
+
+@Generated("com.querydsl.codegen.DefaultSupertypeSerializer")
+public class QBaseEntity extends EntityPathBase<BaseEntity>{
+
+    private static final long serialVersionUID = 1060785366L;
+
+    public static final QBaseEntity baseEntity = new QBaseEntity("baseEntity");
+
+    public final DateTimePath<LocalDateTime> createdAt = createDateTime("createdAt", java.time.LocalDateTime.class);
+
+    public final DateTimePath<java.time.LocalDateTime> modifiedAt = createDateTime("modifiedAt", java.time.LocalDateTime.class);
+
+    public QBaseEntity(String variable) {
+        super(BaseEntity.class, forVariable(variable));
+    }
+
+    public QBaseEntity(Path<? extends BaseEntity> path) {
+        super(path.getType(), path.getMetadata());
+    }
+
+    public QBaseEntity(PathMetadata metadata) {
+        super(BaseEntity.class, metadata);
+    }
+}
